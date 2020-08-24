@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+\usepackage{lingmacros}
+\usepackage{tree-dvips}
+\usepackage{amsmath}
+\pagenumbering{gobble}
+\begin{document}
+
+\begin{center}
+ \begin{tabular}{||c c c c||}
+ \hline
+ \multicolumn{4}{|c|}{Layers by run order} \\
+ \hline
+ Node type & MACC's & \% & Name \\ [0.5ex]
+ \hline\hline
+ DEPTHWISE\_CONV\_2D & 691200 & 8.993\% & [sequential/conv2d/Relu]:0 \\
+ \hline
+ CONV\_2D & 2764800 & 35.973\% & [sequential/conv2d\_1/Relu]:1 \\
+ \hline
+ CONV\_2D & 1382400 & 17.987\% & [sequential/conv2d\_2/Relu]:2 \\
+ \hline
+ CONV\_2D & 2764800 & 35.973\% & [sequential/conv2d\_2/Relu]:2 \\
+ \hline
+ FULLY\_CONNECTED & 81920 & 1.066\% & [sequential/dense/Relu]:6 \\
+ \hline
+ FULLY\_CONNECTED & 512 & 0.007\% & [sequential/dense\_1/Relu]:7 \\
+ \hline
+ SOFTMAX & 112 & 0.001\% & [Identity]:9 \\
+ \hline
+
+\end{tabular}
+\end{center}
+
+\end{document}
